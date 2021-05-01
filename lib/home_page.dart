@@ -84,52 +84,55 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 25, left: 20),
-                        child: Text("Welcome back,",
-                            style: GoogleFonts.poppins(
-                                fontSize: 15.0, fontWeight: FontWeight.w400)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3, left: 20),
-                        child: Container(
-                            margin: EdgeInsets.all(0),
-                            child: Text("Aditi Ravi",
+                        padding: const EdgeInsets.only(top: 25, left: 10),
+                        child: Row(
+                          children: [
+                            Text("Welcome,",
                                 style: GoogleFonts.poppins(
-                                    fontSize: 28.0,
-                                    fontWeight: FontWeight.w600))),
+                                    fontSize: 18.0, fontWeight: FontWeight.w400)),
+
+                              SizedBox(
+                                                      width: 8,
+                                                    ),
+                                    Text("Aditi Ravi",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w600))
+                          ],
+                        ),
                       ),
                       SizedBox(
-                        height: 8,
+                        height: 4,
                       )
                     ],
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                child: TextField(
-                  style:
-                      TextStyle(fontSize: 15.0, height: 1, color: Colors.black),
-                  //maxLines: 2,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: kBlue4.withOpacity(0.05),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide: BorderSide.none,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Colors.black54,
-                    ),
-                    hintText: 'Search',
-                    hintStyle: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: kFontColor.withOpacity(0.5)),
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+              //   child: TextField(
+              //     style:
+              //         TextStyle(fontSize: 15.0, height: 1, color: Colors.black),
+              //     //maxLines: 2,
+              //     decoration: InputDecoration(
+              //       filled: true,
+              //       fillColor: kBlue4.withOpacity(0.05),
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(15.0),
+              //         borderSide: BorderSide.none,
+              //       ),
+              //       prefixIcon: Icon(
+              //         Icons.search,
+              //         color: Colors.black54,
+              //       ),
+              //       hintText: 'Search',
+              //       hintStyle: GoogleFonts.poppins(
+              //           fontSize: 14,
+              //           fontWeight: FontWeight.w500,
+              //           color: kFontColor.withOpacity(0.5)),
+              //     ),
+              //   ),
+              // ),
               buildInfoCards(),
               Container(
                   padding: EdgeInsets.fromLTRB(25, 20, 20, 5),
@@ -144,6 +147,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 height: 490,
                 child: GridView.count(
+                   physics: ScrollPhysics(),
                   crossAxisCount: 3,
                   crossAxisSpacing: 5,
                   mainAxisSpacing: 5,
