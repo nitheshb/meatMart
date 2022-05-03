@@ -35,17 +35,17 @@ class _PageGuideState extends State<PageGuide> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
-            title:Text('Home',style:GoogleFonts.poppins(fontSize: 13),),
+            label:'Home',
             backgroundColor: kBlue4,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            title:Text('Orders',style:GoogleFonts.poppins(fontSize: 13),),
+            label:'Orders',
             backgroundColor: kBlue4,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title:Text('My Account',style:GoogleFonts.poppins(fontSize: 13),),
+            label:'My Account',
             backgroundColor: kBlue4,
           )
         ],

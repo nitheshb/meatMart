@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meatMart/cartPage.dart';
 import 'colors.dart';
 class ProductInfo extends StatefulWidget {
   @override
@@ -101,7 +102,10 @@ class _ProductInfoState extends State<ProductInfo> {
             Padding(
               padding: const EdgeInsets.only(left:15,top: 30),
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                    Navigator.push(context, 
+                    MaterialPageRoute(builder: (context) => ShoppingCartPage()));
+                },
                 elevation: 1,
                 //padding: EdgeInsets.all(2),
                 //textColor: Colors.white,
